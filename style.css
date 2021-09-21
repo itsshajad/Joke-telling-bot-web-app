@@ -5,7 +5,7 @@
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: rgb(114 153 197);
+  background-color: rgb(33 33 33);
   display: flex;
   color: #e4e4e4;
   flex-direction: column;
@@ -34,4 +34,22 @@ button {
 }
 button:hover {
   background-color: rgb(114 153 197);
+}
+
+select {
+  outline: none;
+  padding: 9px;
+  min-width: 75px;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  text-align: center;
+  appearance: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+select,
+option {
+  background: rgb(59 101 168);
 }
