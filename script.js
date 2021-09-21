@@ -1,10 +1,10 @@
 // API // https://v2.jokeapi.dev/joke/Any
 
-let jokeTextPlaceholder = document.getElementById("jokeText");
-const jokeBtn = document.getElementsByTagName("button");
+let jokeTextPlaceholder = document.getElementById('jokeText');
+const jokeBtn = document.getElementsByTagName('button');
 
-jokeBtn[0].addEventListener("click", function () {
-  fetch("https://v2.jokeapi.dev/joke/Any")
+jokeBtn[0].addEventListener('click', function () {
+  fetch('https://v2.jokeapi.dev/joke/Any')
     .then((res) => res.json())
     .then((data) => responsFunction(data));
 });
@@ -19,12 +19,12 @@ recognition.start();
 console.log(recognition);
 
 recognition.onstart = function () {
-  console.log("recognition start");
+  console.log('recognition start');
 };
 
 recognition.onresult = function (event) {
   const transcript = event.results[0][0].transcript;
-  const voice = synth.getVoices("hello here");
+  const voice = synth.getVoices('hello here');
   speakJoke(voice);
   console.log(event);
 };
@@ -36,6 +36,8 @@ const speakJoke = (message) => {
   speech.rate = 1;
   window.speechSynthesis.speak(speech);
 };
+
+speakJoke('something here');
 
 const responsFunction = (data) => {
   jokeTextPlaceholder.innerHTML = data.delivery;
